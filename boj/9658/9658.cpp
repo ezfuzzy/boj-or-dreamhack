@@ -5,18 +5,27 @@ void fastIo(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 }
-int nums_N; // <= 1000
+
+int nums_N, dp[1000]; // <= 1000
+
 int main(){
     fastIo();
     cin >> nums_N;
 
-    // 1, 3, 4 last pick = defeat
-    // do each's best
-    // who's winner
-    // SK first CY second
+    dp[1] = 1;
+    dp[2] = 0;
+    dp[3] = 1;
+    dp[4] = 1;
 
-    // > 필승법부터 찾자.
-    //  
-
+    for (int i = 5; i <= nums_N; i++){
+        if(dp[i-1] && dp[i-3] && dp[i-4])
+            dp[i] = 0;
+        else
+            dp[i] = 1;
+    }
+    if(dp[nums_N])
+        cout << "SK" << '\n';
+    else
+        cout << "CY" << '\n';
     return 0;
 }

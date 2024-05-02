@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 void fastIo(){
@@ -7,43 +6,26 @@ void fastIo(){
     cin.tie(0);
 }
 
+int nums_N, dp[1000]; // <= 1000
 
-int nums_N, ch_remainder;
-bool is_quotient_odd;
-string winner;
 int main(){
-
     fastIo();
     cin >> nums_N;
 
-    ch_remainder = nums_N % 4;
-    is_quotient_odd = (nums_N / 4) % 2;  // if odd ? 1(true) : 0(false)
-    
-    switch (ch_remainder)
-    {
-    case 0:
-    case 2:
-        if (is_quotient_odd)
-            winner = "CY";
+    dp[1] = 1;
+    dp[2] = 0;
+    dp[3] = 1;
+    dp[4] = 1;
+
+    for (int i = 5; i <= nums_N; i++){
+        if(dp[i-1] && dp[i-3] && dp[i-4])
+            dp[i] = 0;
         else
-            winner = "SK";
-        break; 
-    case 1:
-    case 3:
-        if (nums_N <=10)
-            winner = "SK";
-        else{
-            if (is_quotient_odd)
-                winner = "CY";
-            else
-                winner = "SK";
-        }
-        break;
-    default:
-        break;
+            dp[i] = 1;
     }
-
-
-    std::cout << winner << '\n';
+    if(dp[nums_N])
+        cout << "SK" << '\n';
+    else
+        cout << "CY" << '\n';
     return 0;
 }
