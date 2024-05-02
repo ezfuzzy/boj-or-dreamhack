@@ -23,6 +23,7 @@ int main(){
         else
             dp[i] = 1;
     }
+    /////잔디 도대체 //
     if(dp[nums_N])
         cout << "SK" << '\n';
     else
