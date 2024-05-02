@@ -9,6 +9,6 @@ int main(){
     fastIO();
 
     // 왜 잔디 안심어지지
-    
+    cout << "이제 되어야하는데? \n";
     return 0;
 }
