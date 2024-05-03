@@ -15,6 +15,29 @@ int main(){
     fastIo();
     cin >> nums_N;
 
+    fastIo();
+    cin >> nums_N; // <= 3,000,000
+
+    for (int i = 0; i < nums_N; i++){
+        cin >> cur_command;
+
+        if (cur_command == "add"){
+            cin >> cur_num;
+        }
+        else if (cur_command == "remove"){
+            cin >> cur_num;
+        }
+        else if (cur_command == "check"){
+            cin >> cur_num;
+        }
+        else if (cur_command == "toggle"){
+            cin >> cur_num;
+        }      
+        else if (cur_command == "all"){
+        }
+        else if (cur_command == "empty"){
+        }
+    }
     return 0;
 }
 
