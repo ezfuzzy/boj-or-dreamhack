@@ -12,10 +12,11 @@ int main(){
     fastIo();
     cin >> nums_N;
 
-    dp[1] = 1;
-    dp[2] = 0;
-    dp[3] = 1;
+    dp[1] = 0;
+    dp[2] = 1;
+    dp[3] = 0;
     dp[4] = 1;
+
    
     for (int i = 5; i <= nums_N; i++){
         if(dp[i-1] && dp[i-3] && dp[i-4])
@@ -23,7 +24,7 @@ int main(){
         else
             dp[i] = 1;
     }
-    /////잔디 도대체 //
+
     if(dp[nums_N])
         cout << "SK" << '\n';
     else
