@@ -34,6 +34,7 @@ int main(){
             cin >> cur_num;
         }      
         else if (cur_command == "all"){
+            //asdfsadfaf
         }
         else if (cur_command == "empty"){
         }
