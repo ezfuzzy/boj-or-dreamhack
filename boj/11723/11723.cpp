@@ -12,6 +12,8 @@ int nums_N, cur_num;
 string cur_command;
 int main(){
 
+    fastIo();
+    cin >> nums_N;
 
     return 0;
 }
