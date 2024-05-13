@@ -17,5 +17,14 @@
       "stdexcept": "cpp",
       "system_error": "cpp",
       "utility": "cpp"
-    }
+    },
+    "code-runner.ignoreSelection": true,
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [{
+          "scope":"comment",
+          "settings": {
+              "fontStyle": ""
+          }
+      }]
+  }
 }
