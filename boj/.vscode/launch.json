@@ -4,8 +4,8 @@
             "name": "C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            //"program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "program": "./${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            // "program": "./${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "C:\\mingw64\\bin",
@@ -25,7 +25,13 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C/C++: g++.exe build active file"
+            "preLaunchTask": "C/C++: g++.exe build active file",
+            "logging": {
+                "engineLogging": true,
+                "trace": true,
+                "traceResponse": true
+             }
+            
         }
     ],
     "version": "2.0.0"
