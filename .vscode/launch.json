@@ -34,8 +34,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/user/playground/code/c++/boj/1107",
-      "program": "c:/Users/user/playground/code/c++/boj/1107/build/Debug/outDebug",
+      "cwd": "c:/Users/user/playground/code/c++/boj/brute force/1107",
+      "program": "c:/Users/user/playground/code/c++/boj/brute force/1107/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
@@ -44,12 +44,7 @@
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ],
-      "logging": {
-        "engineLogging": true,
-        "trace": true,
-        "traceResponse": true
-     }
+      ]
     }
   ]
 }
