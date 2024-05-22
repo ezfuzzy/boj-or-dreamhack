@@ -34,8 +34,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/user/playground/code/c++/boj/brute force/6064",
-      "program": "c:/Users/user/playground/code/c++/boj/brute force/6064/build/Debug/outDebug",
+      "cwd": "c:/Users/user/playground/code/c++/boj/DP/11727",
+      "program": "c:/Users/user/playground/code/c++/boj/DP/11727/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
