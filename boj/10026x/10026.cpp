@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
+#define fastIo ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
-
-void fastIo(){
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-}
-int nums_N;
+int n;
 char arr[101][101];
+
+
 int main(){
 
-    fastIo();
+    fastIo;
 
-    cin >> nums_N; // 1 ~ 100 dp? 
-
-    for (int i = 0; i < nums_N; i++){
-        for (int j = 0; j < nums_N; j++){    
-            cin >> arr[i][j];
+    cin >> n; // 1 ~ 100 dp? 
+    
+    string str;
+    for (int i = 0; i < n; i++){
+        cin  >> str;
+        for (int j = 0; j < n; j++){    
+            arr[i][j] = str[j];
         }
     }
     
