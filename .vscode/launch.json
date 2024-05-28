@@ -34,8 +34,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/user/playground/code/c++/boj/9019",
-      "program": "c:/Users/user/playground/code/c++/boj/9019/build/Debug/outDebug",
+      "cwd": "c:/Users/user/playground/code/c++/boj/Divide and Conquer/1629",
+      "program": "c:/Users/user/playground/code/c++/boj/Divide and Conquer/1629/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
