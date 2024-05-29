@@ -34,8 +34,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/user/playground/code/c++/boj/Divide and Conquer/1629",
-      "program": "c:/Users/user/playground/code/c++/boj/Divide and Conquer/1629/build/Debug/outDebug",
+      "cwd": "c:/Users/user/playground/code/c++/boj/DSU(disjoint set union)/1043",
+      "program": "c:/Users/user/playground/code/c++/boj/DSU(disjoint set union)/1043/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

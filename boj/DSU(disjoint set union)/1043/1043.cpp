@@ -3,29 +3,24 @@ using namespace std;
 #define fastIo ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
 int n, m, ans=0; // [1, 50]
-vector<int> parents;
+
+int parents[53];
 vector<int> partyPeople[51];
-vector<int> fact;
 
 int find_root(int x){
-  if(parents[x] == x) return x;
-  else if (parents[x] == 0) return 0;
-  
-  return find_root(parents[x]); 
+  if(x != parents[x])
+        return parents[x] = find_root(parents[x]);
+    else
+        return parents[x];
 }
 
-void union_root(int x, int y){
-  x = find_root(x);
-  y = find_root(y);
+void union_root(int px, int py){
+  px = find_root(px);
+  py = find_root(py);
 
-  if(x != y){ // parent가 fact에 있는 사람이 root가 되어야함
-    bool isTrue = find(fact.begin(), fact.end(), y) != fact.end();
-    if(isTrue){  
-      parents[x] = y;
-    } else {
-      if(x < y) parents[y] = x;
-      else parents[x] = y;
-    }
+  if(px != py){
+    if(px < py) parents[py] = px;
+    else parents[px] = py;
   }
 }
 
@@ -35,17 +30,15 @@ int main(){
   int numOfTrue, nums;
   cin >> n >> m >> numOfTrue;
   int cycle_m = m;
+  
   // init
-  parents.push_back(-1);
-  for (int i = 1; i <= n; i++){
-    parents.push_back(i);
-  }
+  for (int i = 1; i <= n; i++)
+    parents[i] = i;
 
   // 진실을 아는 사람들
-  fact.push_back(0);
   for (int i = 1; i <= numOfTrue; i++){
       cin >> nums;
-      fact.push_back(nums);
+      parents[nums] = 0;
   }
 
   // setting 
@@ -54,7 +47,7 @@ int main(){
     
     cin >> nums;
 
-    int curRoot=51;
+    int curRoot=51; // <= 50
     for (int i = 1; i <= nums; i++){
       int a;
       cin >> a; 
@@ -70,20 +63,9 @@ int main(){
     idx++;
   }
 
-  // if know turth: root = 0
-  for (int i = 1; i <= numOfTrue; i++){
-    parents[fact[i]] = 0;
-  }
-
-  // for (int i = 1; i <= n; i++){
-  //   cout << parents[i] << " ";
-  // }
-
-
   // solve 
   for (int i = 1; i <= m; i++){
     for (int curParty: partyPeople[i]){
-      // cout << "curParty: " << curParty << " root: " << find_root(curParty) << endl;
       if(find_root(curParty)){
         ans++;
         break;
